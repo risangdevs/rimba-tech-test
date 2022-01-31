@@ -2,11 +2,32 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/cart">Cart</router-link> |
+      <router-link v-if="!this.$store.state.access_token" to="/login"
+        >Login</router-link
+      >
+      <router-link
+        v-if="this.$store.state.access_token"
+        to="/login"
+        @click.native="logout"
+      >
+        Logout</router-link
+      >
     </div>
     <router-view />
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    logout() {
+      localStorage.removeItem("access_token");
+      this.$router.push("/login");
+      window.location.reload(true)
+    },
+  },
+};
+</script>
 
 <style>
 #app {
@@ -27,6 +48,6 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #ff4141;
 }
 </style>

@@ -30,7 +30,7 @@ module.exports = {
           stok: 500,
           harga_satuan: 45000,
           barang:
-            "https://cdn.hellosehat.com/wp-content/uploads/2021/10/f2d16420-jenis-gandum.jpg",
+            "https://img.lovepik.com/photo/20211121/medium/lovepik-still-life-map-of-cereals-picture_500639899.jpg",
           createdAt: new Date(),
           updatedAt: new Date(),
         },

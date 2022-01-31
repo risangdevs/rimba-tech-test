@@ -11,13 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Sales.belongsTo(models.List,{foreignKey:'ListId'})
+      Sales.belongsTo(models.Customer)
     }
   };
   Sales.init({
     code_transaksi: DataTypes.STRING,
     tanggal_transaksi: DataTypes.DATE,
     CustomerId: DataTypes.INTEGER,
-    ItemId: DataTypes.INTEGER,
+    ListId: DataTypes.INTEGER,
     qty: DataTypes.INTEGER,
     total_diskon: DataTypes.INTEGER,
     total_harga: DataTypes.INTEGER,
