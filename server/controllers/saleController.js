@@ -1,6 +1,9 @@
 const {Sale}=require('../models')
 
 class SaleController{
+    static async getSales(req,res,next){
+        
+    }
     static async getSale(req,res,next){
         
     }
@@ -14,3 +17,4 @@ class SaleController{
 
     }
 }
+module.exports=SaleController

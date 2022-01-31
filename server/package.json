@@ -13,7 +13,9 @@
     "pg": "^8.7.1",
     "sequelize": "^6.15.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
